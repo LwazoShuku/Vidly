@@ -10,12 +10,6 @@ namespace Vidly.Controllers
 {
     public class CustomersController : Controller
     {
-        // GET: Customers
-        //public ActionResult Index()
-        //{
-        //    return View();
-        //}
-
         private ApplicationDbContext _context;
 
         public CustomersController()
@@ -26,6 +20,11 @@ namespace Vidly.Controllers
         protected override void Dispose(bool disposing)
         {
             _context.Dispose();
+        }
+
+        public ActionResult New()
+        {
+            return View();
         }
 
         public ViewResult Index()
